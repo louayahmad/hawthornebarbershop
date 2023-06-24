@@ -124,6 +124,11 @@ a:focus {
 }
 
 @media (min-width: 992px) {
+    html, body{
+        width:100%;
+        overflow-x:hidden;
+        }
+   
     .navbar {
         position: absolute;
         width: 100%;
@@ -147,6 +152,11 @@ a:focus {
 }
 
 @media (max-width: 991.98px) {   
+    html, body{
+        width:100%;
+        overflow-x:hidden;
+        }
+    
     .navbar {
         padding: 15px;
         background: #1d2434 !important;
@@ -170,7 +180,7 @@ a:focus {
     width: 100%;
     margin-bottom: 45px;
     height: calc(100vh - 60px);
-    background: url(../img/AdobeStock_159084202.jpeg) no-repeat center center fixed; 
+    background: url(../img/cover.jpeg) no-repeat center center fixed; 
     background-size: 100% 100%;
 }
 
@@ -206,12 +216,12 @@ a:focus {
     margin-bottom: 20px;
 }
 .hero .hero-text h2 {
-    font-size: 30px;
+    font-size: 20px;
     color: #ffffff;
 
 }
 .hero .hero-text h3 {
-    font-size: 30px;
+    font-size: 20px;
     color: #ffffff;
  
 }
