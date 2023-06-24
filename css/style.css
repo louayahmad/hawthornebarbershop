@@ -182,8 +182,9 @@ a:focus {
     height: calc(100vh - 60px);
     background: url(../img/cover2.jpeg) no-repeat center center; 
     background-attachment: scroll;
-    background-size: cover;
+    background-size: 100% 100%;
 }
+
 
 .hero .container-fluid {
  
