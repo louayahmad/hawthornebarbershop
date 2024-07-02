@@ -182,7 +182,7 @@ a:focus {
   margin-bottom: 45px;
   height: calc(100vh - 60px);
   background: url("../img/coverphoto2.avif");
-  background-attachment: fixed;
+  background-attachment: scroll; /* Changed from fixed to scroll */
   background-size: cover;
   background-position: center;
 }
@@ -246,7 +246,6 @@ a:focus {
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    background-attachment: scroll;
   }
 
   .hero .hero-text {
