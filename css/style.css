@@ -201,23 +201,10 @@ a:focus {
   max-height: 80%;
 }
 
-.hero {
-  position: relative;
-  width: 100%;
-  margin-bottom: 45px;
-  height: calc(100vh - 60px);
-  background: url("../img/coverphoto1.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
 .hero .hero-text {
-  position: absolute; /* Change from relative to absolute */
-  top: 40%; /* Move the text up */
-  left: 50%; /* Horizontally center the text */
-  transform: translate(-50%, -50%); /* Center the text */
+  position: relative;
   padding-left: 75px;
+  height: calc(100vh - 60px);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -230,8 +217,14 @@ a:focus {
   font-weight: 700;
   margin-bottom: 20px;
 }
-
-.hero .hero-text h3,
+.hero .hero-text h2 {
+  font-size: 20px;
+  color: #ffffff;
+}
+.hero .hero-text h3 {
+  font-size: 20px;
+  color: #ffffff;
+}
 .hero .hero-text h4 {
   font-size: 20px;
   color: #ffffff;
