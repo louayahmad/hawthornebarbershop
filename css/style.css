@@ -101,14 +101,15 @@ a:focus {
 
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   padding: 10px 10px 8px 10px;
   color: #ffffff;
+  background: transparent;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav .nav-link:hover {
+  padding: 10px 10px 8px 10px;
+  color: #ffffff;
   background: rgba(256, 256, 256, 0.1);
   transition: none;
 }
@@ -204,6 +205,7 @@ a:focus {
 .hero .hero-text h3,
 .hero .hero-text h4 {
   font-size: 1.5vw; /* Default for desktop */
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -805,7 +807,8 @@ a:focus {
   position: relative;
   margin: 45px 0;
   padding: 120px 0;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       rgba(29, 36, 52, 1),
       rgba(29, 36, 52, 0.5),
       rgba(29, 36, 52, 1)
@@ -1360,5 +1363,77 @@ a:focus {
   .footer .copyright .col-md-6:last-child p {
     margin: 5px 0;
     text-align: center;
+  }
+}
+
+/*******************************/
+/******** Hours CSS ***********/
+/*******************************/
+#hours {
+  overflow: visible;
+}
+
+#hours .hours-list {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+#hours .hours-pill {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 16px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 14px clamp(16px, 4vw, 28px);
+  background: rgba(29, 36, 52, 0.05);
+  border: 1px solid #e2e2e2;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+#hours .hours-day {
+  font-weight: 700;
+  color: #1d2434;
+  flex: 0 1 auto;
+}
+
+#hours .hours-time {
+  color: #797979;
+  text-align: right;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 575.98px) {
+  #hours .hours-pill {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 18px;
+    gap: 4px;
+    padding: 12px 18px;
+  }
+
+  #hours .hours-time {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  #hours .hours-day,
+  #hours .hours-time {
+    font-size: 14px;
   }
 }
