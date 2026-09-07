@@ -540,7 +540,11 @@ a:focus {
 
 .about .about-text a.btn {
   position: relative;
-  margin-top: 15px;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 15px auto 0;
   padding: 12px 25px;
   font-size: 16px;
   font-weight: 600;
@@ -550,6 +554,7 @@ a:focus {
   border-radius: 0;
   background: none;
   transition: 0.3s;
+  text-align: center;
 }
 
 .about .about-text a.btn:hover {
@@ -558,9 +563,26 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+  .about .section-header,
+  .about .about-text {
+    text-align: center;
+  }
+
   .about .about-img {
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     height: auto;
+  }
+
+  .about .about-img::before,
+  .about .about-img::after {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about .about-text a.btn {
+    padding: 12px 22px;
+    font-size: 15px;
   }
 }
 
@@ -658,8 +680,16 @@ a:focus {
   transition: 0.3s;
 }
 
-.price .price-item:hover {
-  background: #d5b981;
+.price .price-item:hover,
+.price .price-item:active,
+.price .price-item:focus {
+  background: rgba(29, 36, 52, 0.04);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .price .price-item:hover {
+    background: #d5b981;
+  }
 }
 
 .price .price-img {
